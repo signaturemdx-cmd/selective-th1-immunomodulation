@@ -603,12 +603,15 @@ function gateClear(){
 }
 function unlockSite(){
   try{sessionStorage.setItem(GATE_KEY,'1');}catch(e){}
-  document.documentElement.classList.remove('gate-locked');
   if(gateEl){
-    gateEl.classList.add('gate-leaving');
+    /* keep the gate painted over the page while it fades out */
+    gateEl.style.display='flex';
+    gateEl.style.pointerEvents='none';
     gateEl.setAttribute('aria-hidden','true');
-    window.setTimeout(function(){gateEl.style.display='none';},780);
+    window.requestAnimationFrame(function(){gateEl.classList.add('gate-leaving');});
   }
+  document.documentElement.classList.remove('gate-locked');
+  if(gateEl){window.setTimeout(function(){gateEl.style.display='none';},820);}
   startHeroVideo();
   initMotion();
   var top=document.querySelector('#top');
