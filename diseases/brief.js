@@ -112,17 +112,25 @@
 
   function initMotion() {
     var reveals = document.querySelectorAll('.reveal');
-    var charts = document.querySelectorAll('[data-chart]');
+    /* every chart scope: explicit [data-chart] blocks, plus bar / column groups and
+       single bars that sit outside them, and trend SVGs */
+    var set = new Set(document.querySelectorAll('[data-chart]'));
+    document.querySelectorAll('.bars,.vbars,.trend').forEach(function (e) {
+      if (!e.closest('[data-chart]')) set.add(e);
+    });
+    document.querySelectorAll('.bar:not(.bars .bar)').forEach(function (e) { set.add(e); });
+    var charts = Array.from(set);
+    function isChart(el) { return el.hasAttribute('data-chart') || el.matches('.bars,.vbars,.bar,.trend'); }
     if (!('IntersectionObserver' in window)) {
       reveals.forEach(function (x) { x.classList.add('in'); });
-      charts.forEach(function (c) { runBars(c); runCounts(c); });
+      charts.forEach(function (c) { if (isChart(c)) runBars(c); runCounts(c); });
       return;
     }
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
         if (!e.isIntersecting) return;
         e.target.classList.add('in');
-        if (e.target.hasAttribute('data-chart')) { runBars(e.target); runCounts(e.target); }
+        if (isChart(e.target)) { runBars(e.target); runCounts(e.target); }
         io.unobserve(e.target);
       });
     }, { threshold: 0.1 });

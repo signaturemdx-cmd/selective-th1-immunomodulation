@@ -100,8 +100,8 @@ section.sec.dark h3.sub{color:#a8c9b7}
 .grid2>*,.grid3>*,.grid4>*,.g-7-5>*,.g-5-7>*,.splitlist>*,.kpis>*,.take>*{min-width:0}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.g-7-5{display:grid;grid-template-columns:1.45fr .8fr;gap:14px}
-.g-5-7{display:grid;grid-template-columns:.8fr 1.4fr;gap:14px}
+.g-7-5{display:grid;grid-template-columns:1.45fr .8fr;gap:14px;align-items:start}
+.g-5-7{display:grid;grid-template-columns:.8fr 1.4fr;gap:14px;align-items:start}
 @media(max-width:900px){.grid2,.grid3,.grid4,.g-7-5,.g-5-7{grid-template-columns:1fr}}
 
 .card{background:var(--paper);border:1px solid var(--line);padding:24px}
@@ -153,6 +153,11 @@ section.sec.dark h3.sub{color:#a8c9b7}
 .bar .fill.navy{background:#2f4a56}
 .bar .bv{text-align:right;font-size:10.5px;color:#344a40;font-variant-numeric:tabular-nums}
 .barfoot{font-size:9.5px;color:#839087;line-height:1.7;margin-top:18px;border-top:1px solid var(--line);padding-top:12px}
+/* bars inside narrow cards and panels stack: label + value, then a full-width track */
+.card .bar,.panel .bar,.mintpanel .bar{grid-template-columns:1fr auto;gap:5px 10px}
+.card .bar .track,.panel .bar .track,.mintpanel .bar .track{grid-column:1/-1;order:3}
+.card .bar .bv,.panel .bar .bv,.mintpanel .bar .bv{order:2}
+.card .bar .bl,.panel .bar .bl,.mintpanel .bar .bl{order:1}
 @media(max-width:560px){.bar{grid-template-columns:100px 1fr 62px;gap:8px}.bar .bl{font-size:9.5px}}
 
 /* vertical columns */
