@@ -42,3 +42,13 @@ Last reviewed: 2026-11-25 (EN/KO edition, News & Notice, inquiry form, public di
 [x] No API keys, passwords, database credentials, tokens or confidential unpublished data in source
 [x] Deployed source and network requests inspected (only the FormSubmit POST leaves the page)
 [x] HTTPS, mobile layout and accessibility checked
+
+## Access gate (2026-11-25)
+[x] Entry screen `#access-gate`: image-free deep slate emerald solid, sage / ivory type, 100dvh
+[x] Code checked as a SHA-256 digest (`crypto.subtle` with a pure-JS fallback); the plain code is not in the source
+[x] `<header>` / `<main>` / `<footer>` hidden until unlock; hero video starts only after unlock
+[x] Session key `nextab_th1_unlocked_v1` (separate from the ALVORA LAB site)
+[ ] Note: this is a client-side preview gate. The page source still contains the full text for anyone
+    who downloads it, and a 4-digit code has only 10,000 SHA-256 preimages, so the gate controls
+    casual viewing, not access to confidential data. Do not place unpublished confidential material
+    behind it and treat the content as non-public only by agreement.

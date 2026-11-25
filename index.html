@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head>
+<html lang="en" class="gate-locked"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Nextab, Inc. — a Th1-focused antibody research program investigating selective modulation of activated Th1 cells across autoimmune disease. Preclinical stage.">
 <meta property="og:title" content="Selective Th1 Immunomodulation | Nextab, Inc.">
@@ -142,13 +142,65 @@ body.lang-ko nav a,body.lang-ko .companyblock span,body.lang-ko .card small,body
 body.lang-ko .value small,body.lang-ko .news-tag,body.lang-ko .btn{text-transform:none;letter-spacing:.05em}
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+<style>
+/* ---- access gate · image-free deep slate emerald, sage / ivory type ---- */
+html.gate-locked,html.gate-locked body{height:100%;overflow:hidden;overscroll-behavior:none}
+html.gate-locked header,html.gate-locked main,html.gate-locked footer{display:none!important}
+#access-gate{position:fixed;inset:0;z-index:900;display:none;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;min-height:100dvh;padding:clamp(22px,5vw,56px);background:radial-gradient(125% 105% at 82% -14%,#1b4753 0%,#133039 34%,#0d2129 63%,#08181e 100%);color:#eef3ec;opacity:1;transition:opacity .7s ease,visibility .7s ease}
+html.gate-locked #access-gate{display:flex}
+#access-gate.gate-leaving{opacity:0;visibility:hidden;pointer-events:none}
+#access-gate:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#b9d2c50d,#b9d2c500 30%,#b9d2c500 68%,#00000030)}
+#access-gate:after{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,#b9d2c500,#b9d2c559 30%,#b9d2c514 70%,#b9d2c500);pointer-events:none}
+.gate-inner{position:relative;width:min(470px,100%);margin:auto}
+.gate-top{display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid #b9d2c529;padding-bottom:15px}
+.gate-brand{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#e9f0e8;font-weight:600;line-height:1.5}
+.gate-brand span{color:#7c9b8c;padding:0 3px}
+.gate-tag{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#8aa89a;white-space:nowrap}
+.gate-main{padding:42px 0 0}
+.gate-eyebrow{font-size:8.5px;letter-spacing:.26em;text-transform:uppercase;color:#a3c2b0;margin:0 0 18px;font-weight:600}
+#gate-title{font:400 clamp(29px,4.6vw,40px)/1.14 Georgia,'Noto Serif KR',serif;letter-spacing:-.02em;margin:0 0 14px;color:#f5f8f1}
+.gate-desc{font-size:12px;line-height:1.9;color:#a6bcb0;max-width:400px;margin:0 0 30px}
+.gate-form{display:grid;gap:9px}
+.gate-label{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:#87a497;font-weight:600}
+.gate-row{display:flex;border:1px solid #b9d2c53d;background:#ffffff08;transition:border-color .3s ease,background .3s ease,box-shadow .3s ease}
+.gate-row:focus-within{border-color:#b9d2c599;background:#b9d2c512;box-shadow:0 0 0 3px #b9d2c512}
+#gate-form.error .gate-row{border-color:#c79f9580;background:#c79f9510}
+#gate-code{flex:1 1 auto;min-width:0;width:100%;background:transparent;border:0;color:#f3f7f1;font:400 17px/1 Inter,'Noto Sans KR',Arial,sans-serif;letter-spacing:.55em;padding:16px 20px;outline:none;border-radius:0}
+#gate-code::placeholder{color:#5f7d70;letter-spacing:.2em;font-size:11px}
+.gate-btn{flex:0 0 auto;border:0;border-left:1px solid #b9d2c53d;background:#b9d2c5;color:#0d2129;font:600 9.5px/1 inherit;letter-spacing:.2em;text-transform:uppercase;padding:0 22px;cursor:pointer;transition:background .25s ease,letter-spacing .25s ease}
+.gate-btn:hover{background:#cfe3d6}
+.gate-btn:focus-visible{outline:2px solid #e6f0e8;outline-offset:-4px}
+.gate-error{margin:0;font-size:10.5px;line-height:1.75;color:#d3a99f;min-height:19px;opacity:0;transform:translateY(-3px);transition:opacity .35s ease,transform .35s ease}
+.gate-error.show{opacity:1;transform:none}
+.gate-foot{margin-top:44px;padding-top:15px;border-top:1px solid #b9d2c51f;display:flex;justify-content:space-between;gap:14px;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#6c8a7d}
+@media(max-width:560px){.gate-inner{width:100%}.gate-main{padding-top:34px}.gate-brand{font-size:10px;letter-spacing:.1em}.gate-tag{display:none}.gate-desc{font-size:11.5px}.gate-btn{padding:0 18px;letter-spacing:.14em}.gate-foot{margin-top:36px;font-size:7.5px;letter-spacing:.1em}}
+@media(max-height:620px){.gate-main{padding-top:26px}.gate-foot{margin-top:26px}.gate-desc{margin-bottom:20px}}
+</style>
 </head>
 <body>
+<script>(function(){try{if(sessionStorage.getItem('nextab_th1_unlocked_v1')==='1')document.documentElement.classList.remove('gate-locked');}catch(e){}})();</script>
+<section id="access-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" aria-describedby="gate-desc">
+<div class="gate-inner">
+<div class="gate-top"><div class="gate-brand">Nextab, Inc. <span aria-hidden="true">·</span> Selective Th1 Platform</div><span class="gate-tag" data-ko="비공개 프리뷰">Private preview</span></div>
+<div class="gate-main">
+<p class="gate-eyebrow" data-ko="접속 코드 입력">Access required</p>
+<h1 id="gate-title" data-ko="플랫폼 프리뷰">Platform preview</h1>
+<p class="gate-desc" id="gate-desc" data-ko="이 사이트는 공개 전 선별된 파트너에게 공유됩니다. 접속 코드를 입력하면 플랫폼과 연구 자료를 볼 수 있습니다.">This site is shared with selected partners ahead of public release. Enter your access code to view the platform and research material.</p>
+<form class="gate-form" id="gate-form" novalidate autocomplete="off">
+<label class="gate-label" for="gate-code" data-ko="접속 코드">Access code</label>
+<div class="gate-row"><input id="gate-code" name="access-code" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="8" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="gate-error" aria-label="Access code / 접속 코드"><button class="gate-btn" type="submit" data-ko="확인">Continue</button></div>
+<p class="gate-error" id="gate-error" role="status" aria-live="polite"></p>
+</form>
+<noscript><p class="gate-error show">JavaScript is required for access. / 접속에는 JavaScript가 필요합니다.</p></noscript>
+</div>
+<div class="gate-foot"><span data-ko="전임상 연구 프로그램">Preclinical research program</span><span>© 2026 Nextab, Inc.</span></div>
+</div>
+</section>
 <header><div class="wrap head"><a class="brand" href="#top">Nextab, Inc.<small data-ko="선택적 Th1 면역조절 · 항체 연구 플랫폼">Selective Th1 Immunomodulation · Antibody Research Platform</small></a><div class="headright"><nav id="primary-nav" aria-label="Primary navigation / 주 메뉴"><a href="#need" data-ko="미충족 수요">Unmet need</a><a href="#platform" data-ko="플랫폼">Platform</a><a href="#evidence" data-ko="근거">Evidence</a><a href="#indications" data-ko="적응증">Indications</a><a href="#landscape" data-ko="시장">Market</a><a href="#technology" data-ko="항체">Antibody</a><a href="#development" data-ko="개발">Development</a><a href="#news" data-ko="뉴스">News</a><a class="navcta" href="#partnership" data-ko="상담">Partnership</a></nav><div class="langswitch" role="group" aria-label="Language / 언어"><button type="button" data-lang-btn="en" aria-pressed="true">EN</button><span aria-hidden="true">|</span><button type="button" data-lang-btn="ko" aria-pressed="false">KO</button></div><button class="menu" aria-label="Menu / 메뉴" aria-expanded="false">☰</button></div></div></header>
 
 <main id="top"><div class="wrap">
 <section class="hero" style="border:0"><div class="reveal"><div class="kicker" data-ko="자가면역질환을 향한 새로운 치료 가설">A new therapeutic hypothesis for autoimmune disease</div><h1 data-ko="공격을 이끄는 세포를<br><em>조용하게.</em>">Calm the cells<br>that <em>drive the attack.</em></h1><p data-ko="활성화된 Th1 세포에 초점을 맞춘 선택적 항체 전략입니다. Th1 세포는 염증 신호를 조직 손상으로 바꿔 놓을 수 있는 면역 효과 세포입니다. 자가면역간염(AIH)은 이 가설을 검증하는 실험적 개념증명 모델이며, 더 큰 기회는 Th1 주도 면역 손상이 질환의 중심 동인인 적응증에 있습니다.">A selective antibody strategy focused on activated Th1 cells — the immune effectors that can turn inflammatory signaling into tissue destruction. Autoimmune hepatitis is the experimental proof-of-concept model. The larger opportunity is to investigate diseases in which Th1-driven immune injury is a central driver.</p><div class="actions"><a class="btn primary" href="#platform" data-ko="플랫폼 살펴보기 ↓">Explore the platform ↓</a><a class="btn" href="#evidence" data-ko="실험 근거 보기 ↗">See experimental evidence ↗</a></div><p class="micro" data-ko="전임상 연구 프로그램입니다. AIH 모델 데이터는 ex vivo(생체 외) 결과이며, 살아 있는 동물이나 사람에서의 치료 효과는 아직 입증되지 않았습니다. 3D 시각 자료는 개념 설명용이며 실제 비율이 아닙니다.">Preclinical research program. AIH model data are ex vivo; therapeutic efficacy in living animals or humans has not yet been established. The 3D visualization is conceptual and not to scale.</p></div>
-<div class="heroart reveal"><video class="herovid" autoplay loop muted playsinline preload="auto" poster="assets/hero-th1.jpg" src="assets/hero-th1.mp4" aria-label="3D visualization of a Y-shaped antibody engaging the surface of an activated Th1 cell, surrounded by red blood cells" data-ko-aria-label="적혈구 사이에서 Y자형 항체가 활성화된 Th1 세포 표면에 결합하는 모습을 표현한 3D 시각 자료"></video><span class="artlabel one" data-ko="활성화된 Th1 세포">Activated Th1 cell</span><span class="artlabel two" data-ko="표적 지향 항체 연구">Target-directed antibody research</span></div><div class="herofoot"><span data-ko="01 / 플랫폼 가설">01 / The platform hypothesis</span><span data-ko="아래로 스크롤 ↓">Scroll to explore ↓</span></div></section></div>
+<div class="heroart reveal"><video class="herovid" loop muted playsinline preload="metadata" poster="assets/hero-th1.jpg" src="assets/hero-th1.mp4" aria-label="3D visualization of a Y-shaped antibody engaging the surface of an activated Th1 cell, surrounded by red blood cells" data-ko-aria-label="적혈구 사이에서 Y자형 항체가 활성화된 Th1 세포 표면에 결합하는 모습을 표현한 3D 시각 자료"></video><span class="artlabel one" data-ko="활성화된 Th1 세포">Activated Th1 cell</span><span class="artlabel two" data-ko="표적 지향 항체 연구">Target-directed antibody research</span></div><div class="herofoot"><span data-ko="01 / 플랫폼 가설">01 / The platform hypothesis</span><span data-ko="아래로 스크롤 ↓">Scroll to explore ↓</span></div></section></div>
 
 <section id="need"><div class="wrap"><div class="sectionhead reveal"><div class="num" data-ko="01 — 미충족 수요">01 — THE UNMET NEED</div><div><h2 data-ko="면역을 억누르면 질환은 조절됩니다.<br>그러나 광범위한 억제에는 대가가 따릅니다.">Suppressing immunity can control disease.<br>But broad suppression has a cost.</h2><p class="lead" data-ko="자가면역질환 환자에게 임상적 과제는 단순히 염증을 줄이는 것이 아닙니다. 보호 면역 기능을 유지하면서 병원성 면역 반응을 조절하고, 감당하기 어려운 치료 부담 없이 그 조절을 지속하는 일입니다.">For patients with autoimmune disease, the clinical challenge is not simply to reduce inflammation. It is to control the pathogenic immune response while preserving protective immune function — and to sustain control without an unacceptable treatment burden.</p></div></div>
 <div class="cards reveal"><article class="card"><small data-ko="환자의 부담">THE PATIENT BURDEN</small><h3 data-ko="장기 치료는 평생의 타협이 되기도 합니다">Long-term treatment can become a lifelong compromise</h3><p data-ko="자가면역간염에서 코르티코스테로이드 기반 치료는 많은 환자에게 효과적이지만, 이상반응과 중단 후 재발, 장기 유지 치료가 지속적인 부담이 됩니다.">In autoimmune hepatitis, corticosteroid-based treatment is effective for many patients, but adverse effects, relapse after withdrawal and long-term maintenance create a persistent burden.</p></article><article class="card"><small data-ko="생물학적 간극">THE BIOLOGICAL GAP</small><h3 data-ko="광범위한 면역억제는 원인 세포를 구분하지 못합니다">Broad immunosuppression does not distinguish the culprit cell</h3><p data-ko="현재의 접근법은 여러 면역 기능을 함께 억제할 수 있습니다. 더 선택적인 전략은 면역을 무차별적으로 잠재우기보다 질환을 이끄는 면역 집단 자체를 조절하려 합니다.">Current approaches can suppress multiple immune functions. A more selective strategy would seek to modulate the disease-driving immune population rather than indiscriminately quieting immunity.</p></article><article class="card"><small data-ko="개발 기회">THE DEVELOPMENT OPPORTUNITY</small><h3 data-ko="선택적 세포 상태 조절은 떠오르는 치료 개념입니다">Selective cell-state modulation is an emerging therapeutic idea</h3><p data-ko="제약 개발사들은 세포 표면 수용체를 통해 병원성 T세포 활성을 바꾸는 방법을 탐색하고 있습니다. 기회는 차별화된 표적과 기전, 치료역을 확립하는 데 있습니다.">Drug developers are exploring ways to alter pathogenic T-cell activity through cell-surface receptors. The opportunity is to establish a differentiated target, mechanism and therapeutic window.</p></article></div>
@@ -320,8 +372,8 @@ body:{en:'This is the first notice on the new channel. Program updates, publicat
 ko:'새 채널의 첫 공지입니다. 프로그램 업데이트, 논문 요약, 학회 노트, 그리고 Th1 생물학과 자가면역질환에 관한 규제·파트너링 소식이 검토를 거쳐 이곳에 게시됩니다. 이전 소식이나 구체적인 문의는 signaturemdx@gmail.com으로 보내 주세요.'}
 }];
 var MSG={
-en:{copied:'Message copied. Paste it into an email to signaturemdx@gmail.com.',copyFail:'Copy is not available in this browser. Select the message and copy it manually.',subject:'Selective Th1 platform inquiry'},
-ko:{copied:'문의 내용을 복사했습니다. signaturemdx@gmail.com으로 붙여넣어 보내 주세요.',copyFail:'이 브라우저에서는 자동 복사를 사용할 수 없습니다. 내용을 선택해 직접 복사해 주세요.',subject:'선택적 Th1 플랫폼 문의'}
+en:{copied:'Message copied. Paste it into an email to signaturemdx@gmail.com.',copyFail:'Copy is not available in this browser. Select the message and copy it manually.',subject:'Selective Th1 platform inquiry',gateWrong:'That code is not correct. Please check it and try again.',gateEmpty:'Please enter your access code.'},
+ko:{copied:'문의 내용을 복사했습니다. signaturemdx@gmail.com으로 붙여넣어 보내 주세요.',copyFail:'이 브라우저에서는 자동 복사를 사용할 수 없습니다. 내용을 선택해 직접 복사해 주세요.',subject:'선택적 Th1 플랫폼 문의',gateWrong:'접속 코드가 맞지 않습니다. 다시 확인해 주세요.',gateEmpty:'접속 코드를 입력해 주세요.'}
 };
 var lang='en', currentTarget='klrc1';
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
@@ -394,11 +446,13 @@ function applyLang(next,sync){
 }
 document.querySelectorAll('[data-lang-btn]').forEach(function(b){b.addEventListener('click',function(){applyLang(b.dataset.langBtn,true);});});
 
-/* ---------- ambient hero video ---------- */
+/* ---------- ambient hero video (starts only once the gate opens) ---------- */
 var heroVid=document.querySelector('.herovid');
-if(heroVid&&window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  heroVid.removeAttribute('autoplay');
-  try{heroVid.pause();}catch(e){}
+var reduceMotion=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+function startHeroVideo(){
+  if(!heroVid||reduceMotion)return;
+  try{heroVid.setAttribute('preload','auto');}catch(e){}
+  try{var pr=heroVid.play();if(pr&&pr.catch)pr.catch(function(){});}catch(e){}
 }
 
 /* ---------- inquiry form fallbacks ---------- */
@@ -435,14 +489,7 @@ try{if(new URLSearchParams(location.search).get('sent')==='1'){var sb=document.q
 /* ---------- language boot ---------- */
 applyLang(readLang(),false);
 
-/* ---------- reveal ---------- */
-var revealEls=document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){
-  var revealIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');revealIO.unobserve(e.target);}});},{threshold:.08});
-  revealEls.forEach(function(x){revealIO.observe(x);});
-}else{revealEls.forEach(function(x){x.classList.add('in');});}
-
-/* ---------- charts ---------- */
+/* ---------- reveal + chart animation (started when the page becomes visible) ---------- */
 function runChart(card){
   card.querySelectorAll('.fill[data-value]').forEach(function(bar,i){
     var v=Math.max(0,Math.min(100,Number(bar.dataset.value)));
@@ -459,11 +506,136 @@ function runChart(card){
     requestAnimationFrame(tick);
   });
 }
-var cards=document.querySelectorAll('.chartcard');
-if('IntersectionObserver' in window){
-  var chartIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){runChart(e.target);chartIO.unobserve(e.target);}});},{threshold:.18});
-  cards.forEach(function(c){chartIO.observe(c);});
-}else{cards.forEach(runChart);}
+var motionStarted=false;
+function initMotion(){
+  if(motionStarted)return;motionStarted=true;
+  var revealEls=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var revealIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');revealIO.unobserve(e.target);}});},{threshold:.08});
+    revealEls.forEach(function(x){revealIO.observe(x);});
+  }else{revealEls.forEach(function(x){x.classList.add('in');});}
+  var cards=document.querySelectorAll('.chartcard');
+  if('IntersectionObserver' in window){
+    var chartIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){runChart(e.target);chartIO.unobserve(e.target);}});},{threshold:.18});
+    cards.forEach(function(c){chartIO.observe(c);});
+  }else{cards.forEach(runChart);}
+}
+
+/* ---------- access gate ---------- */
+var GATE_KEY='nextab_th1_unlocked_v1';
+var GATE_HASH='0e0c8d9c5fa46e66bd8293289e410bbc9e35da10a211a4d5c3e0b64a373db54f';
+var gateEl=document.querySelector('#access-gate'),
+    gateForm=document.querySelector('#gate-form'),
+    gateInput=document.querySelector('#gate-code'),
+    gateError=document.querySelector('#gate-error');
+
+function sha256Fallback(str){
+  var K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+  0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+  0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+  0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+  0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+  0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+  0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+  0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  var H=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  function rr(x,n){return (x>>>n)|(x<<(32-n));}
+  var bytes=[],i,c,cp;
+  for(i=0;i<str.length;i++){
+    c=str.charCodeAt(i);
+    if(c<0x80){bytes.push(c);}
+    else if(c<0x800){bytes.push(0xc0|(c>>6),0x80|(c&63));}
+    else if(c>=0xd800&&c<0xdc00&&i+1<str.length){
+      cp=0x10000+((c-0xd800)<<10)+(str.charCodeAt(++i)-0xdc00);
+      bytes.push(0xf0|(cp>>18),0x80|((cp>>12)&63),0x80|((cp>>6)&63),0x80|(cp&63));
+    }else{bytes.push(0xe0|(c>>12),0x80|((c>>6)&63),0x80|(c&63));}
+  }
+  var bitLen=bytes.length*8;
+  bytes.push(0x80);
+  while(bytes.length%64!==56){bytes.push(0);}
+  bytes.push(0,0,0,0,(bitLen>>>24)&255,(bitLen>>>16)&255,(bitLen>>>8)&255,bitLen&255);
+  for(var off=0;off<bytes.length;off+=64){
+    var w=new Array(64);
+    for(i=0;i<16;i++){w[i]=(bytes[off+i*4]<<24)|(bytes[off+i*4+1]<<16)|(bytes[off+i*4+2]<<8)|bytes[off+i*4+3];}
+    for(i=16;i<64;i++){
+      var s0=rr(w[i-15],7)^rr(w[i-15],18)^(w[i-15]>>>3);
+      var s1=rr(w[i-2],17)^rr(w[i-2],19)^(w[i-2]>>>10);
+      w[i]=(w[i-16]+s0+w[i-7]+s1)|0;
+    }
+    var a=H[0],b=H[1],c2=H[2],d=H[3],e=H[4],f=H[5],g=H[6],h=H[7];
+    for(i=0;i<64;i++){
+      var S1=rr(e,6)^rr(e,11)^rr(e,25),ch=(e&f)^(~e&g);
+      var t1=(h+S1+ch+K[i]+w[i])|0;
+      var S0=rr(a,2)^rr(a,13)^rr(a,22),mj=(a&b)^(a&c2)^(b&c2);
+      var t2=(S0+mj)|0;
+      h=g;g=f;f=e;e=(d+t1)|0;d=c2;c2=b;b=a;a=(t1+t2)|0;
+    }
+    H[0]=(H[0]+a)|0;H[1]=(H[1]+b)|0;H[2]=(H[2]+c2)|0;H[3]=(H[3]+d)|0;
+    H[4]=(H[4]+e)|0;H[5]=(H[5]+f)|0;H[6]=(H[6]+g)|0;H[7]=(H[7]+h)|0;
+  }
+  var out='';
+  for(i=0;i<8;i++){out+=('00000000'+(H[i]>>>0).toString(16)).slice(-8);}
+  return out;
+}
+function gateDigest(str){
+  if(window.crypto&&window.crypto.subtle&&window.crypto.subtle.digest&&window.TextEncoder){
+    try{
+      var buf=new TextEncoder().encode(str);
+      return window.crypto.subtle.digest('SHA-256',buf).then(function(res){
+        var b=new Uint8Array(res),hex='';
+        for(var i=0;i<b.length;i++){hex+=('0'+b[i].toString(16)).slice(-2);}
+        return hex;
+      }).catch(function(){return sha256Fallback(str);});
+    }catch(e){}
+  }
+  return Promise.resolve(sha256Fallback(str));
+}
+function gateSay(msg){
+  if(!gateError)return;
+  gateError.textContent=msg;
+  gateError.classList.add('show');
+  if(gateForm)gateForm.classList.add('error');
+}
+function gateClear(){
+  if(!gateError)return;
+  gateError.classList.remove('show');
+  if(gateForm)gateForm.classList.remove('error');
+}
+function unlockSite(){
+  try{sessionStorage.setItem(GATE_KEY,'1');}catch(e){}
+  document.documentElement.classList.remove('gate-locked');
+  if(gateEl){
+    gateEl.classList.add('gate-leaving');
+    gateEl.setAttribute('aria-hidden','true');
+    window.setTimeout(function(){gateEl.style.display='none';},780);
+  }
+  startHeroVideo();
+  initMotion();
+  var top=document.querySelector('#top');
+  if(top){top.setAttribute('tabindex','-1');try{top.focus({preventScroll:true});}catch(e){try{top.focus();}catch(e2){}}}
+}
+if(gateEl&&document.documentElement.classList.contains('gate-locked')){
+  if(gateInput){try{gateInput.focus({preventScroll:true});}catch(e){try{gateInput.focus();}catch(e2){}}}
+  if(gateInput){gateInput.addEventListener('input',gateClear);}
+  if(gateForm){
+    gateForm.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var code=gateInput?gateInput.value.trim():'';
+      if(!code){gateSay(MSG[lang].gateEmpty);return;}
+      gateDigest(code).then(function(hex){
+        if(hex===GATE_HASH){gateClear();unlockSite();}
+        else{
+          gateSay(MSG[lang].gateWrong);
+          if(gateInput){gateInput.value='';try{gateInput.focus();}catch(e){} }
+        }
+      });
+    });
+  }
+}else{
+  if(gateEl){gateEl.style.display='none';gateEl.setAttribute('aria-hidden','true');}
+  startHeroVideo();
+  initMotion();
+}
 })();
 </script>
 

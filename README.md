@@ -45,3 +45,10 @@ Third-party market figures are estimates with differing definitions and geograph
 
 ## Security
 Static front-end only. No backend, database, authentication or secret credentials are included; the only outbound request is the FormSubmit POST when a visitor submits the inquiry form.
+
+## Access gate
+- On first visit the page shows `#access-gate`: a full-viewport (100dvh) screen with no image or video, only a deep slate-emerald CSS gradient, sage / ivory typography, the brand line `Nextab, Inc. · Selective Th1 Platform`, and one numeric code field.
+- The code is compared as a SHA-256 digest (`crypto.subtle.digest`, with a pure-JavaScript SHA-256 fallback for non-secure contexts). The plain code is not present in the page.
+- Until it is entered, `header`, `main` and `footer` are `display:none` and the hero video does not play (`autoplay` removed from the markup, `preload="metadata"`). Unlocking plays the video, starts the reveal / chart IntersectionObservers and the gate fades out over 0.7 s.
+- Unlock state lives in `sessionStorage['nextab_th1_unlocked_v1']`, so a reload in the same tab stays open and a new session asks again. The key is deliberately separate from the ALVORA LAB site.
+- The gate is presentation, not access control: the HTML source is still served to anyone who requests the page, and a 4-digit code can be brute-forced from its hash. Do not rely on it to protect confidential material.
