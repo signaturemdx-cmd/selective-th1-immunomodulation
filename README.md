@@ -6,7 +6,7 @@ Live: https://signaturemdx-cmd.github.io/selective-th1-immunomodulation/ (Englis
 Korean: https://signaturemdx-cmd.github.io/selective-th1-immunomodulation/?lang=ko
 
 ## Structure
-1. Hero — platform hypothesis
+1. Hero — platform hypothesis, with the 3D antibody / Th1-cell visualization (`assets/hero-th1.mp4`)
 2. 01 Unmet need in current autoimmune treatment
 3. 02 Activated Th1 platform thesis (IL-12 → T-bet → IFN-γ → macrophage / cytotoxic tissue injury)
 4. 03 Preclinical evidence — five interactive charts (patent-backed mouse-cell / ex vivo summaries)
@@ -18,6 +18,10 @@ Korean: https://signaturemdx-cmd.github.io/selective-th1-immunomodulation/?lang=
 10. 09 News & Notice — card grid fed by the `NEWS_ITEMS` array in the page script
 11. Partnership — B2B / investment / research inquiry form (`#partnership`)
 12. Disclaimer — official public legal notice (`#disclaimer`) and footer
+
+## Assets
+- `assets/hero-th1.mp4` — hero visualization loop, 1024×586 H.264 (yuv420p, `+faststart`, no audio, ~1 MB), muted autoplay with `loop` and `playsinline`.
+- `assets/hero-th1.jpg` — poster frame (1024×586) shown before the video loads or when autoplay is blocked; the clip is paused entirely under `prefers-reduced-motion`.
 
 ## Language
 - `EN | KO` buttons in the header, `?lang=ko` / `?lang=en` URL parameter, and `localStorage` key `nextab.th1.lang` (default `en`).
