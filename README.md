@@ -1,6 +1,6 @@
 # Selective Th1 Immunomodulation — Nextab, Inc. Antibody Research Website
 
-Static GitHub Pages site (single `index.html`, no build step, no external JavaScript libraries, fonts, tracking scripts or client-side secrets).
+Static GitHub Pages site: one platform page (`index.html`) plus seven disease briefs under `diseases/`. No build step, no external JavaScript libraries, fonts, tracking scripts or client-side secrets.
 
 Live: https://signaturemdx-cmd.github.io/selective-th1-immunomodulation/ (English default)
 Korean: https://signaturemdx-cmd.github.io/selective-th1-immunomodulation/?lang=ko
@@ -18,6 +18,14 @@ Korean: https://signaturemdx-cmd.github.io/selective-th1-immunomodulation/?lang=
 10. 09 News & Notice — card grid fed by the `NEWS_ITEMS` array in the page script
 11. Partnership — B2B / investment / research inquiry form (`#partnership`)
 12. Disclaimer — official public legal notice (`#disclaimer`) and footer
+
+## Disease briefs (`diseases/`)
+- `aih.html`, `t1d.html`, `hashimoto.html`, `celiac.html`, `vitiligo.html`, `alopecia-areata.html`, `pbc.html` — one B2B / IR research brief per indication: KPI band, executive summary, disease and mechanism, epidemiology with animated bars / trend charts, severity, current treatment, pipeline, market by definition, investor view, sources and a disclaimer.
+- Linked from the 7 `#indications` cards and the 7 `#landscape` cards on the platform page (each card has a `View disease brief →` badge; the whole card is clickable through the link's stretched `::after`).
+- `diseases/brief.css` and `diseases/brief.js` are shared: the same design tokens, header, language switch, chart animation and access gate as the platform page. Each page carries its own bilingual content in `data-ko` attributes on top of English markup.
+- Hero images live in `assets/diseases/*.webp` (1600 px wide, ~50–190 KB). The AIH cover is a generated illustration in the same series as the supplied Hashimoto / T1D / vitiligo / alopecia / PBC artwork; the supplied AIH asset was a screenshot of the brief page itself and is not used.
+- Language: `?lang=`, `localStorage('nextab.th1.lang')` and the gate key `nextab_th1_unlocked_v1` are shared with the platform page, so a reader who unlocked the platform in Korean arrives at a brief already unlocked and in Korean.
+- Per-page `?lang=` links and the section anchors (`#summary`, `#disease`, `#epi`, `#severity`, `#treatment`, `#pipeline`, `#market`, `#investor`, `#sources`, `#disclaimer`) are stable.
 
 ## Assets
 - `assets/hero-th1.mp4` — hero visualization loop, 1024×586 H.264 (yuv420p, `+faststart`, no audio, ~1 MB), muted autoplay with `loop` and `playsinline`.
