@@ -206,6 +206,15 @@ section.sec.dark table.tbl td:first-child{color:#fff}
 .callout.plain{border-color:var(--line);background:#f2f4ec;color:#4d5e55}
 .callout.dark{border-color:#33505a;background:#1d3740;color:#c6d3ca}
 .note{font-size:10.5px;line-height:1.8;color:#7b8a81;margin-top:14px}
+/* ---------- footnotes: source, base year, scope and secondary-reporting notes ---------- */
+.footnote,.card .footnote,.chartcard .footnote,.mintpanel .footnote,.kpiwrap .footnote,.panel .footnote,.callout .footnote{font-size:11.5px;line-height:1.55;color:var(--muted);margin:10px 0 0;max-width:86ch}
+.footnote b,.card .footnote b,.chartcard .footnote b,.mintpanel .footnote b,.kpiwrap .footnote b{color:#4c6156;font-weight:600}
+.kpiwrap .footnote{border-top:1px solid var(--line);padding-top:10px;margin-top:12px}
+.panel .footnote,.panel .footnote b{color:#b9c7be}
+.panel .footnote b{color:#dcebdf}
+.sec.dark .footnote,.sec.dark .footnote b{color:#a9bdb0}
+.sec.dark .footnote b{color:#dcebdf}
+@media(max-width:560px){.footnote,.card .footnote,.chartcard .footnote,.mintpanel .footnote,.kpiwrap .footnote,.panel .footnote{font-size:11px}}
 
 ul.clean{list-style:none;margin:0;padding:0}
 ul.clean li{position:relative;padding:9px 0 9px 16px;border-bottom:1px solid var(--line);font-size:12px;line-height:1.75;color:#4d5e55}
