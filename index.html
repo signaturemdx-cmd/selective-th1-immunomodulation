@@ -193,6 +193,35 @@ html.gate-locked #access-gate{display:flex}
 .indication .status{align-self:flex-start}
 .indication h3,.indication p{width:100%}
 .landscape-card .marketline{margin-top:14px}
+
+/* ---- mechanism visuals · gate background, 3D target structure, before/after slider ---- */
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:clip}
+#access-gate.vanta-on{background:#0b1614}
+#access-gate canvas.vanta-canvas{position:absolute!important;inset:0;width:100%!important;height:100%!important;z-index:0;opacity:.6;pointer-events:none!important}
+#access-gate:before{z-index:1}
+#access-gate .gate-inner{position:relative;z-index:2}
+.mechvisual{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.mechcard{background:#0b1a17;border:1px solid #22423b;display:flex;flex-direction:column;min-width:0;color:#eef3ec}
+.mechhead{padding:22px 24px 15px}
+.mechhead small{display:block;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#8fb4a6;margin-bottom:9px}
+.mechhead h3{font:400 21px/1.32 var(--serif);margin:0 0 7px;color:#f3f6ef}
+.mechhead p{font-size:10.5px;color:#9fb3a9;line-height:1.8;margin:0}
+.molstage{position:relative;margin:0 12px;border:1px solid #22423b;background:#0a1917;height:396px;overflow:hidden;cursor:grab;touch-action:pan-y}
+.molstage:active{cursor:grabbing}
+.molstage>div{position:absolute;inset:0}
+.molstatus{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:22px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#8fb4a6;line-height:1.9}
+.molstatus.hide{display:none}
+.molhint{position:absolute;left:9px;bottom:9px;z-index:3;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#e6efe5;background:#0b1b19cc;border:1px solid #ffffff24;padding:5px 8px;pointer-events:none}
+.mechfoot{padding:12px 24px 17px;font-size:8.5px;color:#7f9489;line-height:1.75}
+.sliderwrap{margin:0 12px;border:1px solid #22423b;background:#0a1917;overflow:hidden}
+img-comparison-slider{display:block;--divider-width:2px;--divider-color:#e9dfc8;--default-handle-width:46px;--default-handle-color:#e9dfc8;--default-handle-opacity:.92;--divider-shadow:0 0 14px #00000073}
+img-comparison-slider img{display:block;width:100%;height:auto}
+img-comparison-slider.noslider img+img{display:none}
+.statband{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:16px}
+.stat{background:var(--paper);padding:22px 20px}
+.stat b{display:block;font:400 34px/1 var(--serif);color:var(--green);font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:9px;font-size:9.5px;color:var(--muted);line-height:1.6}
+@media(max-width:850px){.mechvisual{grid-template-columns:1fr}.statband{grid-template-columns:1fr 1fr}.molstage{height:330px}}
 </style>
 </head>
 <body>
@@ -226,6 +255,20 @@ html.gate-locked #access-gate{display:flex}
 
 <section id="platform"><div class="wrap"><div class="sectionhead reveal"><div class="num" data-ko="02 — 플랫폼 가설">02 — THE PLATFORM THESIS</div><div><h2 data-ko="AIH는 모델입니다.<br>기회는 활성화된 Th1 생물학에 있습니다.">AIH is the model.<br>Activated Th1 biology is the opportunity.</h2><p class="lead" data-ko="전략적 제안은 AIH 단일 적응증 치료제가 아니라, IL-12 → T-bet → IFN-γ 축이 조직 손상을 시작하거나 유지하고 그 하류에서 대식세포 활성화와 세포독성 손상이 이어지는 부위에서 활성화된 Th1 세포를 조절하는 표적 주도 항체 플랫폼입니다.">The strategic proposition is not an AIH-only drug. It is a target-led antibody platform intended to modulate activated Th1 cells where the IL-12 → T-bet → IFN-γ axis initiates or sustains tissue injury, with downstream macrophage activation and cytotoxic damage.</p></div></div>
 <div class="thesis reveal"><div class="thesismain"><div class="kicker" style="color:#a9c9b6" data-ko="핵심 가설">The core hypothesis</div><h3 data-ko="조직의 모든 염증 신호가 아니라, 병원성 Th1 세포 상태를 표적으로.">Target the pathogenic Th1 cell state — not every inflammatory signal in the tissue.</h3><p data-ko="IFN-γ는 정의된 Th1 개시 생물학적 서열 안의 효과 판독값으로 다루며, 그것만으로 질환이 Th1 주도임을 증명하는 지표로 보지 않습니다. 개발 질문은 활성화된 Th1 집단의 선택적 조절이 다른 면역 구획을 보존하면서 하류의 조직 파괴 활성을 줄일 수 있는가입니다.">IFN-γ is treated as an effector readout within a defined Th1-initiated biological sequence, not as proof by itself that a disease is Th1-driven. The development question is whether selective modulation of the activated Th1 population can reduce downstream tissue-destructive activity while preserving other immune compartments.</p></div><div class="pathway"><div class="step" data-ko="IL-12 신호전달">IL-12 signalling</div><div class="arrow">↓</div><div class="step" data-ko="T-bet 유도">T-bet induction</div><div class="arrow">↓</div><div class="step" data-ko="활성화 Th1 · IFN-γ">Activated Th1 · IFN-γ</div><div class="arrow">↓</div><div class="step" data-ko="대식세포 활성화 + 세포독성 손상">Macrophage activation + cytotoxic injury</div><small data-ko="질환 생물학 작업 프레임">Working disease-biology framework</small></div></div>
+<div class="mechvisual reveal">
+<div class="mechcard"><div class="mechhead"><small data-ko="상호작용 3D 구조">Interactive structure</small><h3 data-ko="KLRC1 / NKG2A 표적 상호작용 3D 구조">Interactive 3D Target Structure (KLRC1 / NKG2A)</h3><p data-ko="마우스로 드래그해 회전하고 스크롤·핀치로 확대합니다. 손을 떼면 자동 회전이 다시 시작됩니다.">Drag to rotate; scroll or pinch to zoom. Auto-rotation resumes a moment after you let go.</p></div>
+<div class="molstage" id="mol-stage"><div class="molstatus" id="mol-status" data-ko="구조 불러오는 중…">Loading structure…</div><span class="molhint" data-ko="드래그 회전 · 확대">Drag · zoom</span></div>
+<div class="mechfoot" data-ko="PDB 3BDW · 사람 CD94/NKG2A 이종이합체 · 2.5 Å X선 구조 (RCSB PDB). 분자 구조는 표적 결합 가설을 설명하기 위한 참고 자료입니다.">PDB 3BDW · human CD94/NKG2A heterodimer · 2.5 Å X-ray structure (RCSB PDB). The structure is reference material for the target-engagement hypothesis.</div></div>
+<div class="mechcard"><div class="mechhead"><small data-ko="기전 비교">Mechanism comparison</small><h3 data-ko="광범위 면역억제 vs. 선택적 Th1 조절">Broad immunosuppression vs. selective Th1 modulation</h3><p data-ko="가운데 핸들을 좌우로 움직여 두 접근을 비교합니다.">Move the handle left and right to compare the two approaches.</p></div>
+<div class="sliderwrap"><img-comparison-slider tabindex="0" aria-label="Before and after mechanism comparison / 기전 비교"><img slot="first" src="assets/mechanism/mechanism-before-en.png" data-img-en="assets/mechanism/mechanism-before-en.png" data-img-ko="assets/mechanism/mechanism-before-ko.png" data-alt-en="Conceptual schematic: broad immunosuppression suppresses activated Th1 cells together with Th2, Treg, B and NK cells" data-alt-ko="개념 모식도: 광범위 면역억제는 활성 Th1 세포와 함께 Th2, Treg, B, NK 세포를 억제합니다" alt="Conceptual schematic: broad immunosuppression suppresses activated Th1 cells together with Th2, Treg, B and NK cells"><img slot="second" src="assets/mechanism/mechanism-after-en.png" data-img-en="assets/mechanism/mechanism-after-en.png" data-img-ko="assets/mechanism/mechanism-after-ko.png" data-alt-en="Conceptual schematic: NT1-1 engages KLRC1 / NKG2A on activated Th1 cells while other compartments are preserved in the hypothesis" data-alt-ko="개념 모식도: NT1-1은 활성 Th1 세포의 KLRC1 / NKG2A에 결합하고, 가설상 다른 면역 구획은 보존됩니다" alt="Conceptual schematic: NT1-1 engages KLRC1 / NKG2A on activated Th1 cells while other compartments are preserved in the hypothesis"></img-comparison-slider></div>
+<div class="mechfoot" data-ko="개념 설명용 모식도 · 실제 비율 아님 · 연구 가설이며 치료 효과는 입증되지 않았습니다.">Conceptual schematics · not to scale · research hypothesis; no therapeutic effect has been established.</div></div>
+</div>
+<div class="statband reveal">
+<div class="stat"><b><span data-countup="7">7</span></b><span data-ko="탐색 중인 질환 영역">Disease areas under evaluation</span></div>
+<div class="stat"><b><span data-countup="5">5</span></b><span data-ko="전임상 실험 관찰 (03)">Experimental observations (03)</span></div>
+<div class="stat"><b>−<span data-countup="52">52</span>%</b><span data-ko="AIH 모델 ex vivo 염증 신호 감소 (NT1-1 보고값)">AIH-model ex vivo inflammatory signal reduction (NT1-1, reported)</span></div>
+<div class="stat"><b><span data-countup="2.5" data-decimals="1">2.5</span> Å</b><span data-ko="NKG2A 구조 해상도 · PDB 3BDW">NKG2A structure resolution · PDB 3BDW</span></div>
+</div>
 <div class="quote" style="margin-top:15px;padding:22px 25px;border-left:2px solid var(--green);background:#e5ebe4;font:23px/1.4 Georgia,serif;color:#314a40" data-ko="첫 적응증은 기전을 검증할 수 있습니다. 질환을 가로지르는 생물학은 플랫폼의 전략적 가치를 정의할 수 있습니다.">A first indication can validate the mechanism. A disease-spanning biology can define the platform's strategic value.</div></div></section>
 
 <section id="evidence"><div class="wrap"><div class="sectionhead reveal"><div class="num" data-ko="03 — 전임상 근거">03 — PRECLINICAL EVIDENCE</div><div><h2 data-ko="다섯 가지 실험 관찰.<br>일관된 방향: Th1 중심 조절.">Five experimental observations.<br>One consistent direction: Th1-focused modulation.</h2><p class="lead" data-ko="아래 차트는 2026년 11월 프로그램 투자자료에 수록된 수치 요약을 재현한 것입니다. 각 패널이 화면에 들어오면 막대가 움직이고 보고된 값에서 멈춥니다. 특허 도면 근사치로 표시된 값은 원자료를 대체하지 않습니다.">The following interactive charts reproduce the numerical summaries published in the program's November 2026 investment materials. Bars animate when each panel enters view, then stop at the reported value. Values identified as patent-figure approximations are not substitutes for raw data.</p></div></div>
@@ -456,6 +499,7 @@ function applyLang(next,sync){
     el.setAttribute('placeholder',(lang==='ko')?el.getAttribute('data-ko-placeholder'):el.getAttribute('data-en-placeholder'));
   });
   document.querySelectorAll('[data-lang-btn]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.langBtn===lang));});
+  applyLangAssets();
   renderTarget(currentTarget);renderNews();
   var cs=document.querySelector('#copy-status');if(cs&&cs.classList.contains('show')){cs.textContent=MSG[lang].copied;}
   storeLang(lang);
@@ -473,6 +517,176 @@ function startHeroVideo(){
   try{heroVid.setAttribute('preload','auto');}catch(e){}
   try{var pr=heroVid.play();if(pr&&pr.catch)pr.catch(function(){});}catch(e){}
 }
+
+
+/* ---------- visual features: gate background, smooth scroll, count-up, 3D structure ---------- */
+var libs={},vantaEffect=null,lenis=null,molViewer=null,molBusy=false,molTimer=null,molVisible=false;
+function loadScript(src){
+  if(!libs[src]){libs[src]=new Promise(function(res,rej){
+    var s=document.createElement('script');s.src=src;s.async=true;
+    s.onload=function(){res();};s.onerror=function(){libs[src]=null;rej(new Error('load failed: '+src));};
+    document.head.appendChild(s);
+  });}
+  return libs[src]||Promise.reject(new Error('load failed: '+src));
+}
+function applyLangAssets(){
+  document.querySelectorAll('[data-img-en]').forEach(function(img){
+    var src=(lang==='ko')?img.getAttribute('data-img-ko'):img.getAttribute('data-img-en');
+    if(src&&img.getAttribute('src')!==src){img.setAttribute('src',src);}
+    var alt=(lang==='ko')?img.getAttribute('data-alt-ko'):img.getAttribute('data-alt-en');
+    if(alt){img.setAttribute('alt',alt);}
+  });
+  var st=document.querySelector('#mol-status');
+  if(st&&!st.classList.contains('hide')&&st.getAttribute('data-ko')){
+    st.textContent=(lang==='ko')?st.getAttribute('data-ko'):'Loading structure…';
+  }
+}
+function initGateVanta(){
+  var gate=document.querySelector('#access-gate');
+  if(!gate||vantaEffect||!document.documentElement.classList.contains('gate-locked'))return;
+  if(typeof VANTA==='undefined'||typeof THREE==='undefined')return;
+  try{
+    vantaEffect=VANTA.CELLS({el:gate,THREE:THREE,color:0x2f7f6b,backgroundColor:0x0b1614,backgroundAlpha:1,speed:0.85,scale:1.15,scaleMobile:0.75,mouseControls:true,touchControls:true});
+    gate.classList.add('vanta-on');
+  }catch(e){vantaEffect=null;}
+}
+function destroyGateVanta(){
+  try{if(vantaEffect&&typeof vantaEffect.destroy==='function')vantaEffect.destroy();}catch(e){}
+  vantaEffect=null;
+  var gate=document.querySelector('#access-gate');
+  if(gate)gate.classList.remove('vanta-on');
+}
+function initLenis(){
+  if(lenis||reduceMotion||typeof Lenis==='undefined')return;
+  try{
+    lenis=new Lenis({duration:1.1,easing:function(t){return t===1?1:1-Math.pow(2,-10*t);},smoothWheel:true,smoothTouch:false,wheelMultiplier:1,touchMultiplier:1.4});
+    var raf=function(time){lenis.raf(time);window.requestAnimationFrame(raf);};
+    window.requestAnimationFrame(raf);
+  }catch(e){lenis=null;}
+}
+function bootSmoothScroll(){
+  if(lenis)return;
+  if(typeof Lenis!=='undefined'){initLenis();return;}
+  loadScript('https://unpkg.com/lenis@1.1.18/dist/lenis.min.js').then(initLenis).catch(function(){});
+}
+function runCountUps(){
+  if(typeof countUp==='undefined'||!countUp.CountUp)return;
+  if(runCountUps.done)return;runCountUps.done=true;
+  var els=document.querySelectorAll('[data-countup]');
+  if(!els.length)return;
+  var start=function(el){
+    if(el.__cu)return;el.__cu=true;
+    var end=parseFloat(el.getAttribute('data-countup'))||0;
+    var dec=parseInt(el.getAttribute('data-decimals')||'0',10);
+    if(typeof countUp==='undefined'||!countUp.CountUp){el.__cu=false;return;}
+    try{new countUp.CountUp(el,end,{decimalPlaces:dec,duration:1.9,useGrouping:false,startVal:0}).start();}catch(e){el.__cu=false;}
+  };
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){start(e.target);io.unobserve(e.target);}});},{threshold:.5});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(start);}
+}
+function molStatus(text,show){
+  var st=document.querySelector('#mol-status');
+  if(!st)return;
+  if(text)st.textContent=text;
+  st.classList.toggle('hide',!show);
+}
+function startMolSpin(){
+  if(!molViewer||reduceMotion)return;
+  try{molViewer.spin('y',0.6);}catch(e){}
+}
+function stopMolSpin(){try{if(molViewer)molViewer.spin(false);}catch(e){}}
+function initMol(){
+  var stage=document.querySelector('#mol-stage');
+  if(!stage||molViewer||molBusy)return;
+  molBusy=true;
+  loadScript('https://unpkg.com/3dmol@2.4.2/build/3Dmol-min.js').then(function(){
+    return fetch('assets/pdb/3bdw.pdb',{cache:'force-cache'}).then(function(r){
+      if(!r.ok)throw new Error('pdb '+r.status);
+      return r.text();
+    });
+  }).then(function(pdbText){
+    var host=document.createElement('div');
+    stage.insertBefore(host,stage.firstChild);
+    molViewer=$3Dmol.createViewer(host,{backgroundColor:'#0a1917',backgroundAlpha:1,antialias:true});
+    molViewer.addModel(pdbText,'pdb');
+    molViewer.setStyle({chain:'A'},{cartoon:{color:'#5c918a',opacity:0.96}});
+    molViewer.setStyle({chain:'B'},{cartoon:{color:'#c9a86a',opacity:0.98}});
+    molViewer.zoomTo({chain:['A','B']});
+    molViewer.rotate(16,'y');
+    var center=function(chain){
+      var atoms=molViewer.selectedAtoms({chain:chain,atom:'CA'}),c={x:0,y:0,z:0};
+      atoms.forEach(function(a){c.x+=a.x;c.y+=a.y;c.z+=a.z;});
+      if(atoms.length){c.x/=atoms.length;c.y/=atoms.length;c.z/=atoms.length;}
+      return c;
+    };
+    var ca=center('A'),cb=center('B');
+    molViewer.addLabel('CD94 (KLRD1)',{position:ca,fontColor:'#e8f1e9',fontSize:11,backgroundColor:'#0d211e',backgroundOpacity:0.72,borderColor:'#5c918a',borderThickness:1,showBackground:true});
+    molViewer.addLabel('NKG2A (KLRC1)',{position:cb,fontColor:'#f6e9cd',fontSize:11,backgroundColor:'#0d211e',backgroundOpacity:0.72,borderColor:'#c9a86a',borderThickness:1,showBackground:true});
+    molViewer.render();
+    molStatus('',false);
+    startMolSpin();
+    var resume=function(){window.clearTimeout(molTimer);molTimer=window.setTimeout(function(){if(molVisible)startMolSpin();},3500);};
+    stage.addEventListener('pointerdown',function(){stopMolSpin();},{passive:true});
+    stage.addEventListener('pointerup',resume,{passive:true});
+    stage.addEventListener('pointerleave',resume,{passive:true});
+    stage.addEventListener('touchstart',function(){stopMolSpin();},{passive:true});
+    stage.addEventListener('touchend',resume,{passive:true});
+  }).catch(function(){
+    molBusy=false;
+    molStatus((lang==='ko')?'3D 구조를 불러오지 못했습니다.':'3D structure could not be loaded.',true);
+  });
+}
+function initVisuals(){
+  bootSmoothScroll();
+  runCountUps();
+  var stage=document.querySelector('#mol-stage');
+  if(stage&&initVisuals.molObs){return;}
+  if(stage&&'IntersectionObserver' in window){
+    initVisuals.molObs=true;
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        molVisible=e.isIntersecting;
+        if(e.isIntersecting){initMol();startMolSpin();}else{stopMolSpin();}
+      });
+    },{rootMargin:'400px 0px'});
+    io.observe(stage);
+  }else if(stage){initMol();}
+}
+function bootVendors(){
+  loadScript('https://unpkg.com/three@0.134.0/build/three.min.js')
+    .then(function(){return loadScript('https://unpkg.com/vanta@0.5.24/dist/vanta.cells.min.js');})
+    .then(initGateVanta).catch(function(){});
+  loadScript('https://unpkg.com/countup.js@2.8.0/dist/countUp.umd.js').then(runCountUps).catch(function(){});
+  loadScript('https://unpkg.com/img-comparison-slider@7/dist/index.js').then(function(){
+    window.setTimeout(function(){
+      document.querySelectorAll('img-comparison-slider').forEach(function(el){
+        if(!window.customElements||!window.customElements.get('img-comparison-slider'))el.classList.add('noslider');
+      });
+    },1500);
+  }).catch(function(){
+    document.querySelectorAll('img-comparison-slider').forEach(function(el){el.classList.add('noslider');});
+  });
+  if(!document.documentElement.classList.contains('gate-locked')){initVisuals();}
+}
+window.setTimeout(bootVendors,250);
+window.addEventListener('resize',function(){
+  if(!molViewer)return;
+  window.clearTimeout(molTimer);
+  molTimer=window.setTimeout(function(){try{molViewer.resize();molViewer.render();}catch(e){}},220);
+});
+document.addEventListener('click',function(ev){
+  var a=ev.target&&ev.target.closest?ev.target.closest('a[href^="#"]'):null;
+  if(!a||!lenis)return;
+  var id=a.getAttribute('href');
+  if(!id||id.length<2)return;
+  var t=document.querySelector(id);
+  if(!t)return;
+  ev.preventDefault();
+  lenis.scrollTo(t,{offset:-78,duration:1.1});
+  try{history.replaceState(null,'',id);}catch(e){}
+});
 
 /* ---------- inquiry form fallbacks ---------- */
 function formData(){
@@ -622,6 +836,7 @@ function gateClear(){
 }
 function unlockSite(){
   try{sessionStorage.setItem(GATE_KEY,'1');}catch(e){}
+  window.setTimeout(destroyGateVanta,860);
   if(gateEl){
     /* keep the gate painted over the page while it fades out */
     gateEl.style.display='flex';
@@ -633,6 +848,7 @@ function unlockSite(){
   if(gateEl){window.setTimeout(function(){gateEl.style.display='none';},820);}
   startHeroVideo();
   initMotion();
+  initVisuals();
   var top=document.querySelector('#top');
   if(top){top.setAttribute('tabindex','-1');try{top.focus({preventScroll:true});}catch(e){try{top.focus();}catch(e2){}}}
 }
@@ -657,6 +873,7 @@ if(gateEl&&document.documentElement.classList.contains('gate-locked')){
   if(gateEl){gateEl.style.display='none';gateEl.setAttribute('aria-hidden','true');}
   startHeroVideo();
   initMotion();
+  initVisuals();
 }
 })();
 </script>
