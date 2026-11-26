@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>layout check</title>
+<style>
+html,body{margin:0;background:#1b1f1d;color:#e9efe9;font:12px/1.5 Arial,sans-serif}
+.row{display:flex;gap:18px;padding:14px;align-items:flex-start}
+.dev{background:#0b1614;border:1px solid #35544b;padding:8px}
+.dev b{display:block;font-size:11px;letter-spacing:.08em;color:#8fb4a6;margin-bottom:6px}
+iframe{border:0;display:block;background:#fff}
+#out{white-space:pre;font:12px/1.6 monospace;color:#cfe0d5;padding:6px 14px 18px}
+.hide{position:fixed;left:-20000px;top:0}
+</style></head>
+<body>
+<div class="row">
+  <div class="dev"><b>390 × 844</b><iframe id="m390" width="390" height="844" src="./index.html?lang=en"></iframe></div>
+</div>
+<div id="out">measuring…</div>
+<div class="hide" id="hidden"></div>
+<script>
+(function(){
+  var KEY='nextab_th1_unlocked_v1';
+  var widths=[360,390,768,1440];
+  var main=document.getElementById('m390');
+  var hidden=document.getElementById('hidden');
+  var results={};
+
+  function unlock(f){
+    try{f.contentWindow.sessionStorage.setItem(KEY,'1');}catch(e){}
+    f.contentWindow.location.reload();
+  }
+  main.addEventListener('load',function(){unlock(main);},{once:true});
+
+  var pending=widths.length;
+  widths.forEach(function(w){
+    var d=document.createElement('div');
+    d.className='dev';hidden.appendChild(d);
+    var f=document.createElement('iframe');
+    f.id='w'+w;f.width=w;f.height=800;f.src='./index.html?lang=en';
+    d.appendChild(f);
+    f.addEventListener('load',function(){
+      try{f.contentWindow.sessionStorage.setItem(KEY,'1');}catch(e){}
+      f.addEventListener('load',function(){
+        setTimeout(function(){
+          try{
+            var doc=f.contentDocument,de=doc.documentElement;
+            var over=de.scrollWidth-de.clientWidth;
+            var worst=null,max=0;
+            var els=doc.querySelectorAll('body *');
+            for(var i=0;i<els.length;i++){
+              var r=els[i].getBoundingClientRect();
+              if(r.right>de.clientWidth+1&&r.width>max){max=r.width;worst=els[i].className||els[i].tagName;}
+            }
+            results[w]={overflow:over, widest:max? Math.round(max):0, widestEl:String(worst||'').slice(0,40)};
+          }catch(e){results[w]={error:String(e)};}
+          pending--;
+          document.getElementById('out').textContent=JSON.stringify(results,null,1);
+          document.title='check '+pending;
+        },2200);
+      },{once:true});
+      f.contentWindow.location.reload();
+    },{once:true});
+  });
+})();
+</script>
+</body></html>
