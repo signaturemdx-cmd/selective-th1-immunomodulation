@@ -546,7 +546,7 @@ function initGateVanta(){
   if(!gate||vantaEffect||!document.documentElement.classList.contains('gate-locked'))return;
   if(typeof VANTA==='undefined'||typeof THREE==='undefined')return;
   try{
-    vantaEffect=VANTA.CELLS({el:gate,THREE:THREE,color:0x2f7f6b,backgroundColor:0x0b1614,backgroundAlpha:1,speed:0.85,scale:1.15,scaleMobile:0.75,mouseControls:true,touchControls:true});
+    vantaEffect=VANTA.NET({el:gate,THREE:THREE,color:0x3f9c86,backgroundColor:0x0b1614,backgroundAlpha:1,points:9,maxDistance:24,spacing:22,showDots:true,speed:0.8,scale:1.05,scaleMobile:1.8,mouseControls:true,touchControls:true});
     gate.classList.add('vanta-on');
   }catch(e){vantaEffect=null;}
 }
@@ -656,7 +656,7 @@ function initVisuals(){
 }
 function bootVendors(){
   loadScript('https://unpkg.com/three@0.134.0/build/three.min.js')
-    .then(function(){return loadScript('https://unpkg.com/vanta@0.5.24/dist/vanta.cells.min.js');})
+    .then(function(){return loadScript('https://unpkg.com/vanta@0.5.24/dist/vanta.net.min.js');})
     .then(initGateVanta).catch(function(){});
   loadScript('https://unpkg.com/countup.js@2.8.0/dist/countUp.umd.js').then(runCountUps).catch(function(){});
   loadScript('https://unpkg.com/img-comparison-slider@7/dist/index.js').then(function(){
