@@ -220,7 +220,8 @@ img-comparison-slider.noslider img+img{display:none}
 .statband{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:16px}
 .stat{background:var(--paper);padding:22px 20px}
 .stat b{display:block;font:400 34px/1 var(--serif);color:var(--green);font-variant-numeric:tabular-nums}
-.stat span{display:block;margin-top:9px;font-size:9.5px;color:var(--muted);line-height:1.6}
+.stat>span{display:block;margin-top:9px;font-size:9.5px;color:var(--muted);line-height:1.6}
+.stat b span{display:inline;margin:0;font-size:inherit;color:inherit;line-height:inherit;font-variant-numeric:tabular-nums}
 @media(max-width:850px){.mechvisual{grid-template-columns:1fr}.statband{grid-template-columns:1fr 1fr}.molstage{height:330px}}
 </style>
 </head>
@@ -613,6 +614,7 @@ function initMol(){
     molViewer.addModel(pdbText,'pdb');
     molViewer.setStyle({chain:'A'},{cartoon:{color:'#5c918a',opacity:0.96}});
     molViewer.setStyle({chain:'B'},{cartoon:{color:'#c9a86a',opacity:0.98}});
+    molViewer.setStyle({chain:['C','D']},{});
     molViewer.zoomTo({chain:['A','B']});
     molViewer.rotate(16,'y');
     var center=function(chain){
