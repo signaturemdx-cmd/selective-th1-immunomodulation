@@ -18,7 +18,38 @@ header{height:72px;position:sticky;top:0;z-index:30;background:#f0f1ebed;backdro
 section{padding:100px 0;border-top:1px solid var(--line)}.sectionhead{display:grid;grid-template-columns:.62fr 1.38fr;gap:45px;margin-bottom:42px}.sectionhead h2{font-size:clamp(34px,4.4vw,56px);line-height:1.07;letter-spacing:-.05em;font-weight:500;margin:10px 0 0}.lead{font-size:14px;color:#637169;line-height:1.85;max-width:800px;margin:16px 0 0}
 .thesis{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.thesismain{background:var(--navy);color:#f1f3ed;padding:34px;min-height:290px}.thesismain h3{font:35px/1.2 var(--serif);font-weight:400;margin:16px 0}.thesismain p{font-size:12px;color:#c6d1ca;line-height:1.85;max-width:620px}.pathway{background:#e0e9e1;padding:28px;display:flex;flex-direction:column;justify-content:center}.pathway .step{border:1px solid #b9c9bd;background:#f5f7f1;padding:12px 14px;text-align:center;font-size:12px;color:#315546}.pathway .arrow{text-align:center;color:#779283;font-size:17px;line-height:1.5}.pathway small{font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#6a7c71;text-align:center;margin-top:12px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.card{background:var(--paper);padding:26px;min-height:220px}.card small{font-size:9px;color:var(--green);letter-spacing:.14em}.card h3{font-size:19px;line-height:1.3;font-weight:550;margin:22px 0 9px}.card p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}
-.chartgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.chartcard{background:var(--paper);border:1px solid var(--line);padding:25px}.chartcard.wide{grid-column:1/-1}.charttop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.charttop h3{font-size:18px;font-weight:550;margin:0}.charttop small{font-size:8px;color:#75847b;letter-spacing:.1em;text-transform:uppercase;text-align:right}.chartdesc{font-size:11px;color:var(--muted);line-height:1.75;margin:9px 0 20px}.barlist{display:grid;gap:13px}.barrow{display:grid;grid-template-columns:130px 1fr 54px;gap:10px;align-items:center}.barlabel{font-size:10px;color:#52625a}.track{height:13px;background:#e8ece6;position:relative;overflow:hidden}.fill{height:100%;width:0;background:var(--green);transition:width 1.5s cubic-bezier(.2,.75,.2,1)}.fill.alt{background:#8fa59a}.fill.teal{background:var(--teal)}.fill.red{background:var(--red)}.barvalue{text-align:right;font-size:10px;font-variant-numeric:tabular-nums;color:#344a40}.barfoot{font-size:9px;color:#839087;margin-top:16px;line-height:1.7}.chartcallout{display:flex;gap:12px;align-items:center;background:#e5ece5;padding:14px 16px;margin-top:15px}.chartcallout strong{font:28px var(--serif);color:var(--green);white-space:nowrap}.chartcallout span{font-size:10px;color:#607067;line-height:1.65}
+.chartgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.chartcard{background:var(--paper);border:1px solid var(--line);padding:25px;display:flex;flex-direction:column}.chartcard>.barfoot{margin-top:auto;padding-top:16px}.chartcard.wide{grid-column:1/-1}.charttop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.charttop h3{font-size:18px;font-weight:550;margin:0}.charttop small{font-size:8px;color:#75847b;letter-spacing:.1em;text-transform:uppercase;text-align:right}.chartdesc{font-size:11px;color:var(--muted);line-height:1.75;margin:9px 0 20px}.barlist{display:grid;gap:13px}.barrow{display:grid;grid-template-columns:130px 1fr 54px;gap:10px;align-items:center}.barlabel{font-size:10px;color:#52625a}.track{height:13px;background:#e8ece6;position:relative;overflow:hidden}.fill{height:100%;width:0;background:var(--green);transition:width 1.5s cubic-bezier(.2,.75,.2,1)}.fill.alt{background:#8fa59a}.fill.teal{background:var(--teal)}.fill.red{background:var(--red)}.barvalue{text-align:right;font-size:10px;font-variant-numeric:tabular-nums;color:#344a40}.barfoot{font-size:9px;color:#839087;margin-top:16px;line-height:1.7}.chartcallout{display:flex;gap:12px;align-items:center;background:#e5ece5;padding:14px 16px;margin-top:15px}.chartcallout strong{font:28px var(--serif);color:var(--green);white-space:nowrap}.chartcallout span{font-size:10px;color:#607067;line-height:1.65}
+/* ---- #03 panel 04: publication-style SVG chart (brief 2026-11-28) ---- */
+.svgchart{margin:0;position:relative}
+.svgchart svg{display:block;overflow:visible;font-family:inherit}
+.svgchart .sc-grid{stroke:#dde4dd;stroke-width:1;stroke-dasharray:2 3}
+.svgchart .sc-ref{stroke:#a7bbaf;stroke-width:1;stroke-dasharray:3 3}
+.svgchart .sc-axisline{stroke:#b3c3b8;stroke-width:1}
+.svgchart .sc-track{fill:#eff2ec}
+.svgchart .sc-lbl{fill:#4d5d55;font-weight:500}
+.svgchart .sc-val{fill:#20362c;font-weight:600;font-variant-numeric:tabular-nums}
+.svgchart .sc-val.in{fill:#f6f9f4}
+.svgchart .sc-row.lead .sc-lbl{fill:#1c4136;font-weight:700}
+.svgchart .sc-row.lead .sc-val{fill:#17453a}
+.svgchart .sc-tick{fill:#86958d;font-variant-numeric:tabular-nums}
+.svgchart .sc-tick.strong{fill:#3a5147;font-weight:600}
+.svgchart .sc-delta{stroke:#2b5646;stroke-width:1;stroke-linecap:square;fill:none}
+.svgchart .sc-delta-txt{fill:#2b5646;font-weight:600;letter-spacing:-.01em}
+.svgchart .sc-guide{stroke:#b1c2b7;stroke-width:1;stroke-dasharray:2 3}
+.svgchart .sc-bar{transition:opacity .25s ease}
+.svgchart .sc-row{cursor:default;outline:none}
+.svgchart svg.sc-hover .sc-row:not(.on) .sc-bar{opacity:.42}
+.svgchart .sc-row:focus-visible .sc-lbl,.svgchart .sc-row:focus-visible .sc-val{fill:#14624d}
+.svgchart .sc-row:focus-visible .sc-bar{stroke:#0f3b2e;stroke-width:1}
+.svgchart-tip{position:absolute;left:0;top:0;z-index:6;pointer-events:none;opacity:0;transform:translate(-50%,-100%);background:#172c35;color:#f3f7f3;padding:7px 10px 8px;box-shadow:0 10px 24px -14px #0b2028;transition:opacity .14s ease}
+.svgchart-tip.show{opacity:1}
+.svgchart-tip b{display:block;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#a3c1b3;font-weight:600;margin-bottom:2px}
+.svgchart-tip i{font-style:normal;font-size:14px;font-variant-numeric:tabular-nums;margin-right:7px}
+.svgchart-tip em{font-style:normal;font-size:9.5px;color:#c6d6cc}
+.evsummary{margin-top:18px;background:#e5ebe3;border-left:3px solid var(--green);padding:26px 30px}
+.evsummary p{margin:0;font-size:13px;line-height:1.95;color:#3c5047;max-width:940px}
+body.lang-ko .evsummary p{line-height:2.1;word-break:keep-all}
+@media(max-width:560px){.evsummary{padding:20px 20px}.evsummary p{font-size:12px;line-height:1.9}}
 .disclaimer{background:#e6ebe4;padding:15px 18px;font-size:10px;color:#66746c;line-height:1.8;margin-top:13px}.baseline{height:1px;background:#c9d2ca;margin:13px 0 2px;position:relative}.baseline:before{content:"";position:absolute;left:0;top:-4px;width:1px;height:9px;background:#9aaba0}
 .indications{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.indication{background:var(--paper);border:1px solid var(--line);padding:21px;min-height:190px;position:relative}.indication .tier{font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--green)}.indication h3{font-size:18px;margin:12px 0 7px;font-weight:550}.indication p{font-size:11px;line-height:1.75;color:var(--muted);margin:0}.indication .status{display:inline-block;margin-top:13px;border:1px solid #cbd6cd;padding:4px 7px;font-size:8px;color:#64776b}
 .marketband{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.marketbox{padding:26px;background:#e1e9e1}.marketbox.dark{background:var(--navy);color:#edf1ea}.marketbox h3{font:28px/1.2 var(--serif);margin:12px 0}.marketbox p{font-size:11px;color:#68766e;line-height:1.8}.marketbox.dark p{color:#c4d0c8}.marketbox small{font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}.marketbox.dark small{color:#a7c4b3}
@@ -289,22 +320,18 @@ img-comparison-slider.noslider img+img{display:none}
 <div class="barrow"><span class="barlabel">Treg</span><div class="track"><div class="fill alt" data-value="3.08"></div></div><span class="barvalue" data-count="4">0</span></div>
 <div class="barrow"><span class="barlabel" data-ko="나이브">Naive</span><div class="track"><div class="fill alt" data-value="2.31"></div></div><span class="barvalue" data-count="3">0</span></div></div><div class="barfoot" data-ko="마우스 면역세포 결과, 특허 도면 근사치. 프로그램 투자자료는 유전자 수준 PCR과 단백질 수준 FACS를 두 가지 확인 방법으로 기술하며, 표시 값은 특허 도면 근사치입니다.">Mouse immune-cell results; patent figure approximate values. The program's investment materials describe gene-level PCR and protein-level FACS as two confirmation methods; values are patent-figure approximations.</div></article>
 
-<article class="chartcard reveal"><div class="charttop"><h3 data-ko="03 · 염증 신호 조절">03 · Inflammatory signal modulation</h3><small data-ko="IFN-γ · 특허 도면 값">IFN-γ · patent figure values</small></div><p class="chartdesc" data-ko="ConA 자극 조건에서 항체 처리 후 IFN-γ 신호는 218.4에서 141.9로 감소했습니다. 정상 Th1 기준값은 100입니다.">In the ConA-stimulated condition, the reported IFN-γ signal fell from 218.4 to 141.9 after antibody treatment. Normal Th1 reference is 100.</p><div class="barlist">
+<article class="chartcard reveal"><div class="charttop"><h3 data-ko="03 · 염증 신호 조절">03 · Inflammatory signal modulation</h3><small data-ko="IFN-γ 수치">IFN-γ values</small></div><p class="chartdesc" data-ko="ConA 자극 AIH 모델에서 항체 처리 후 보고된 IFN-γ 신호가 218.4에서 141.9로 감소했습니다. 정상 Th1 기준 세포의 IFN-γ 수치는 100입니다.">In the ConA-stimulated AIH model, the reported IFN-γ signal fell from 218.4 to 141.9 after antibody treatment. IFN-γ level in normal Th1 reference cell is 100.</p><div class="barlist">
 <div class="barrow"><span class="barlabel" data-ko="정상 Th1">Normal Th1</span><div class="track"><div class="fill alt" data-value="45.8"></div></div><span class="barvalue" data-count="100">0</span></div>
 <div class="barrow"><span class="barlabel" data-ko="ConA 활성">ConA activated</span><div class="track"><div class="fill red" data-value="100"></div></div><span class="barvalue" data-count="218.4">0</span></div>
 <div class="barrow"><span class="barlabel" data-ko="ConA + 항체">ConA + antibody</span><div class="track"><div class="fill teal" data-value="65.0"></div></div><span class="barvalue" data-count="141.9">0</span></div></div><div class="chartcallout"><strong>−35%</strong><span data-ko="활성 상태 대비 보고된 감소(218.4 → 141.9). 신호는 감소했으며 완전히 제거되지는 않았습니다.">Reported reduction from the activated state (218.4 → 141.9). Signal was reduced, not eliminated.</span></div><div class="barfoot" data-ko="마우스 면역세포 실험. 프로그램 투자자료에는 단순화한 차트(115 / 250 / 115)도 함께 실려 있으며, 이 패널은 백분율 계산에 사용된 별도 특허 도면 값을 사용합니다.">Mouse immune-cell experiment. A simplified summary chart also appears in the program's investment materials (115 / 250 / 115); this panel uses the separately stated patent figure values for the stated percentage calculation.</div></article>
 
-<article class="chartcard reveal"><div class="charttop"><h3 data-ko="04 · AIH 모델 ex vivo 실험">04 · AIH-model ex vivo experiment</h3><small data-ko="상대 염증 신호">Relative inflammatory signal</small></div><p class="chartdesc" data-ko="AIH 관련 세포 실험에서 NT1-1은 대조 항체 조건 대비 가장 큰 감소를 보였습니다.">In the AIH-related cell experiment, NT1-1 produced the largest reported reduction versus the control-antibody conditions.</p><div class="barlist">
-<div class="barrow"><span class="barlabel" data-ko="대조 항체 A">Control Ab A</span><div class="track"><div class="fill alt" data-value="100"></div></div><span class="barvalue" data-count="250">0</span></div>
-<div class="barrow"><span class="barlabel" data-ko="대조 B">Control B</span><div class="track"><div class="fill alt" data-value="98"></div></div><span class="barvalue" data-count="245">0</span></div>
-<div class="barrow"><span class="barlabel" data-ko="후보 2">Candidate 2</span><div class="track"><div class="fill" data-value="64"></div></div><span class="barvalue" data-count="160">0</span></div>
-<div class="barrow"><span class="barlabel">NT1-1</span><div class="track"><div class="fill teal" data-value="48"></div></div><span class="barvalue" data-count="120">0</span></div></div><div class="chartcallout"><strong>−52%</strong><span data-ko="대조 항체 A 대비 NT1-1(250 → 120), 프로그램 투자자료 보고값.">NT1-1 relative to Control Ab A (250 → 120), as reported in the program's investment materials.</span></div><div class="barfoot" data-ko="마우스 면역세포 ex vivo 실험, 특허 도면 근사치. 반복 수와 표준편차는 데이터룸에서 제공됩니다. 생체 내 AIH 효능 결과가 아닙니다.">Ex vivo mouse immune-cell experiment; patent figure approximate values. Replicate counts and SD are stated to be available in the data room. This is not an in vivo AIH efficacy result.</div></article>
+<article class="chartcard reveal"><div class="charttop"><h3 data-ko="04 · AIH 모델 ex vivo 실험">04 · AIH-model ex vivo experiment</h3><small data-ko="상대 염증 신호">Relative inflammatory signal</small></div><p class="chartdesc" data-ko="AIH 모델에서 NT1-1이 가장 큰 감소 폭을 보였습니다.">In the AIH model, NT1-1 produced the largest reported reduction.</p><figure class="svgchart" data-svgchart="aih04" role="group" aria-label="Bar chart, relative inflammatory signal: Untreated AIH 250, Isotype Ab 245, NT1-2 160, NT1-1 120. NT1-1 is 52% lower than Untreated AIH." data-ko-aria-label="막대 차트, 상대 염증 신호: 미처리 AIH 250, Isotype Ab 245, NT1-2 160, NT1-1 120. NT1-1은 미처리 AIH 대비 52% 감소."></figure><div class="chartcallout"><strong>−52%</strong><span data-ko="미처리 AIH 대비 NT1-1 상대 수치 (250 → 120).">NT1-1 relative to Untreated AIH (250 → 120).</span></div><div class="barfoot" data-ko="마우스 면역세포 ex vivo 실험, 특허 도면 근사치. 반복 수와 표준편차는 데이터룸에서 제공됩니다. 생체 내 AIH 효능 결과가 아닙니다.">Ex vivo mouse immune-cell experiment; patent figure approximate values. Replicate counts and SD are stated to be available in the data room. This is not an in vivo AIH efficacy result.</div></article>
 
 <article class="chartcard wide reveal"><div class="charttop"><h3 data-ko="05 · 선택성 신호: Th1 대 Th17">05 · Selectivity signal: Th1 versus Th17</h3><small data-ko="상대 반응 / 특허 도면 근사치">Relative response / patent figure approximation</small></div><p class="chartdesc" data-ko="표시된 실험 조건에서 보고된 반응은 Th17보다 Th1에서 높았습니다. 기반 FACS 데이터셋으로 확인이 필요한 예비 선택성 신호입니다.">The reported response was higher in Th1 than Th17 under the displayed experimental condition — a preliminary selectivity signal that needs confirmation by the underlying FACS dataset.</p><div class="barlist" style="max-width:760px">
 <div class="barrow"><span class="barlabel">Th1</span><div class="track"><div class="fill red" data-value="100"></div></div><span class="barvalue" data-count="5.7">0</span></div>
 <div class="barrow"><span class="barlabel">Th17</span><div class="track"><div class="fill alt" data-value="12.28"></div></div><span class="barvalue" data-count="0.7">0</span></div></div><div class="chartcallout"><strong>~8.1×</strong><span data-ko="보고된 Th1(5.7)과 Th17(0.7) 값의 차이. 5.7 / 0.7 비교는 마우스 세포 실험에서 얻은 특허 도면 근사치입니다.">Difference between the reported Th1 (5.7) and Th17 (0.7) values. The 5.7 / 0.7 comparison is presented as a patent-figure approximation from mouse-cell work.</span></div><div class="barfoot" data-ko="마우스 세포 특허 도면 근사치. 확립된 사람 선택성이나 임상 안전성을 나타내는 값이 아닙니다.">Mouse-cell patent-figure approximation. These values are not a measure of established human selectivity or clinical safety.</div></article>
 </div>
-<div class="disclaimer reveal"><strong data-ko="근거의 범위.">Evidence boundary.</strong> <span data-ko="이 데이터는 전임상, 그중에서도 대부분 마우스 세포 / ex vivo 관찰입니다. 생체 내 치료 효과, 사람에서의 표적 결합, 임상 안전성, 임상 유효성 또는 스테로이드 절감 효과를 입증하지 않습니다. 표시된 값은 프로그램 투자자료의 특허 기반 요약을 재현한 것이며, 원자료 데이터셋은 비공개 과학 실사 자료실에서 제공됩니다.">These data are preclinical, predominantly mouse-cell / ex vivo observations. They do not demonstrate in vivo therapeutic efficacy, human target engagement, clinical safety, clinical efficacy or a steroid-sparing benefit. The displayed values reproduce patent-backed summaries in the program's investment materials; the underlying datasets are available in a confidential scientific data room.</span></div></div></section>
+<div class="evsummary reveal"><p data-ko="우리 면역계에는 여러 종류의 T세포가 있으며, 자가면역질환에서는 그중 Th1 세포가 조직 손상의 상당 부분을 주도합니다. 코르티코스테로이드 같은 기존 치료제는 면역계 전체를 억제하기 때문에 장기 사용 시 감염을 비롯한 심각한 부작용을 유발합니다. 우리의 데이터는 본 항체의 표적이 Th1 세포에는 높게 발현되는 반면 Th17 및 다른 T세포 유형에서는 매우 낮게 발현되며, 마우스 면역세포에서 활성화된 Th1 세포를 진정시킨다는 점을 보여줍니다. 이는 광범위 면역억제제보다 부작용이 적을 잠재력을 지닌, 자가면역성 간염 및 기타 Th1 매개 자가면역질환 대상 세포 유형 특이적 항체 치료제로의 가능성을 시사합니다. 다음 단계는 동물실험입니다.">Our immune system has different types of T cells, and in autoimmune disease one type, the Th1 cell, drives much of the damage. Common treatments such as corticosteroids dampen the whole immune system, which is why long-term use brings infections and other serious side effects. Our data show that the target of our antibody is found at high levels on Th1 cells but at very low levels on Th17 and other T-cell types, and the antibody calmed activated Th1 cells in mouse immune cells. This points to a cell-type-specific antibody therapy for autoimmune hepatitis and other Th1-driven autoimmune diseases, with the potential for fewer side effects than broad immunosuppressants. Animal studies are the next step.</p></div></div></section>
 
 <section id="indications"><div class="wrap"><div class="sectionhead reveal"><div class="num" data-ko="04 — 적응증 확장">04 — INDICATION EXPANSION</div><div><h2 data-ko="하나의 표적 가설.<br>탐색할 여러 질환 영역.">One target hypothesis.<br>Multiple disease settings to investigate.</h2><p class="lead" data-ko="확장 논리는 제안된 상류 Th1 질환 프로그램 — IL-12 → T-bet → IFN-γ — 과 그 뒤의 대식세포 활성화, 세포독성 조직 손상에 근거합니다. AIH는 첫 실험 모델이며 플랫폼의 경계가 아닙니다.">The expansion logic is based on the proposed upstream Th1 disease program — IL-12 → T-bet → IFN-γ — followed by macrophage activation and cytotoxic tissue injury. AIH is the initial experimental model, not the boundary of the platform.</p></div></div>
 <div class="indications reveal">
@@ -503,6 +530,7 @@ function applyLang(next,sync){
   applyLangAssets();
   renderTarget(currentTarget);renderNews();
   var cs=document.querySelector('#copy-status');if(cs&&cs.classList.contains('show')){cs.textContent=MSG[lang].copied;}
+  refreshSvgCharts();
   storeLang(lang);
   if(sync!==false){
     try{var u=new URL(location.href);if(u.searchParams.get('lang')!==lang){u.searchParams.set('lang',lang);history.replaceState(null,'',u.toString());}}catch(e){}
@@ -744,6 +772,130 @@ function runChart(card){
     requestAnimationFrame(tick);
   });
 }
+/* ---------- #03 panel 04: publication-style SVG bar chart ---------- */
+var SC_DATA={
+  aih04:{
+    max:250,ref:250,ticks:[0,50,100,150,200,250],
+    bars:[
+      {en:'Untreated AIH',ko:'미처리 AIH',value:250,tone:'ctl',isRef:true},
+      {en:'Isotype Ab',ko:'Isotype Ab',value:245,tone:'ctl2'},
+      {en:'NT1-2',ko:'NT1-2',value:160,tone:'deep'},
+      {en:'NT1-1',ko:'NT1-1',value:120,tone:'lead',isLead:true}
+    ],
+    delta:{from:250,to:120,en:'−52% reduction',ko:'−52% 감소'}
+  }
+};
+var SC_TONE={ctl:'#8fa199',ctl2:'#a4b1aa',deep:'#2c5748',lead:'#48a99a'};
+function scNode(n,a){var e=document.createElementNS('http://www.w3.org/2000/svg',n);if(a){for(var k in a)e.setAttribute(k,a[k]);}return e;}
+function scPct(v,ref){var r=Math.round((v-ref)/ref*1000)/10;return (r<0?'\u2212':'+')+Math.abs(r)+'%';}
+function scAria(b,data,L){
+  if(b.isRef)return b[L]+': '+b.value+(L==='ko'?' 상대 염증 신호, 기준 조건':' relative inflammatory signal, reference condition');
+  return b[L]+': '+b.value+(L==='ko'?' 상대 염증 신호, 미처리 AIH 대비 ':' relative inflammatory signal, ')+scPct(b.value,data.ref)+(L==='ko'?' 감소':' lower than Untreated AIH');
+}
+function scTipFill(tip,b,data,L){
+  tip.innerHTML='';
+  var t=document.createElement('b');t.textContent=b[L];tip.appendChild(t);
+  var v=document.createElement('i');v.textContent=b.value;tip.appendChild(v);
+  var e=document.createElement('em');
+  e.textContent=b.isRef?(L==='ko'?'기준':'reference'):scPct(b.value,data.ref)+(L==='ko'?' · 미처리 AIH 대비':' · vs Untreated AIH');
+  tip.appendChild(e);
+}
+function scRender(host){
+  if(!host)return;
+  var data=(typeof SC_DATA!=='undefined'&&SC_DATA)?SC_DATA[host.getAttribute('data-svgchart')]:null;if(!data)return;
+  var L=(lang==='ko')?'ko':'en';
+  var w=Math.round(host.clientWidth||0);
+  if(w<160){host.setAttribute('data-pending','1');return;}
+  host.removeAttribute('data-pending');
+  var narrow=w<400;
+  var fsL=narrow?8.6:(w<480?9.3:10),fsV=fsL+0.6,fsT=narrow?7.6:8.4,fsD=narrow?9:10;
+  var padR=narrow?20:26,barH=narrow?11:13,gap=narrow?11:13,lg=6,top=8;
+  var plotW=w-padR,rowH=fsL+lg+barH+gap,barsH=rowH*data.bars.length;
+  var yB=top+barsH+22,axisY=yB+18,h=axisY+15;
+  function X(v){return v/data.max*plotW;}
+  host.innerHTML='';
+  var svg=scNode('svg',{width:w,height:h,viewBox:'0 0 '+w+' '+h});
+  data.ticks.forEach(function(t){
+    svg.appendChild(scNode('line',{class:'sc-grid'+(t===data.ref?' sc-ref':''),x1:X(t).toFixed(1),y1:top-2,x2:X(t).toFixed(1),y2:axisY}));
+  });
+  var rows=[];
+  data.bars.forEach(function(b,i){
+    var rowTop=top+i*rowH,yLab=rowTop+fsL*0.92,yBar=rowTop+fsL+lg,mid=yBar+barH/2,bw=X(b.value);
+    var g=scNode('g',{class:'sc-row'+(b.isLead?' lead':'')});
+    g.setAttribute('tabindex','0');
+    g.setAttribute('role','img');
+    g.setAttribute('aria-label',scAria(b,data,L));
+    var lab=scNode('text',{class:'sc-lbl',x:0,y:yLab.toFixed(1),'font-size':fsL.toFixed(1)});
+    lab.textContent=b[L];g.appendChild(lab);
+    g.appendChild(scNode('rect',{class:'sc-track',x:0,y:yBar.toFixed(1),width:plotW.toFixed(1),height:barH}));
+    var bar=scNode('rect',{class:'sc-bar',x:0,y:yBar.toFixed(1),width:bw.toFixed(2),height:barH,fill:SC_TONE[b.tone]});
+    bar.setAttribute('data-w',bw.toFixed(2));bar.setAttribute('data-v',b.value);g.appendChild(bar);
+    var inBar=bw>=plotW*0.68;
+    var val=scNode('text',{class:'sc-val'+(inBar?' in':'')+'',x:(inBar?bw-8:bw+6).toFixed(1),y:(mid+fsV*0.35).toFixed(1),'font-size':fsV.toFixed(1),'text-anchor':inBar?'end':'start'});
+    val.setAttribute('data-v',b.value);val.textContent=b.value;g.appendChild(val);
+    g.appendChild(scNode('rect',{class:'sc-hit',x:0,y:(rowTop-fsL).toFixed(1),width:w,height:rowH.toFixed(1),fill:'transparent'}));
+    svg.appendChild(g);rows.push(g);
+    g._bw=bw;g._mid=mid;g._yBar=yBar;
+  });
+  var d=data.delta,xFrom=X(d.from),xTo=X(d.to);
+  var lastBarBottom=top+(data.bars.length-1)*rowH+fsL+lg+barH;
+  svg.appendChild(scNode('line',{class:'sc-guide',x1:xTo.toFixed(1),y1:(lastBarBottom+3).toFixed(1),x2:xTo.toFixed(1),y2:(yB+4).toFixed(1)}));
+  svg.appendChild(scNode('path',{class:'sc-delta',d:'M'+xTo.toFixed(1)+' '+(yB-5)+'V'+(yB+5)+'M'+xTo.toFixed(1)+' '+yB+'H'+xFrom.toFixed(1)+'M'+xFrom.toFixed(1)+' '+(yB-5)+'V'+(yB+5)}));
+  var dt=scNode('text',{class:'sc-delta-txt',x:((xFrom+xTo)/2).toFixed(1),y:(yB-7).toFixed(1),'font-size':fsD.toFixed(1),'text-anchor':'middle'});
+  dt.textContent=d[L];svg.appendChild(dt);
+  svg.appendChild(scNode('line',{class:'sc-axisline',x1:0,y1:axisY,x2:plotW.toFixed(1),y2:axisY}));
+  data.ticks.forEach(function(t,i){
+    var x=X(t),first=i===0,last=i===data.ticks.length-1;
+    svg.appendChild(scNode('line',{class:'sc-axisline',x1:x.toFixed(1),y1:axisY,x2:x.toFixed(1),y2:axisY+4}));
+    var tx=scNode('text',{class:'sc-tick'+(last?' strong':''),x:x.toFixed(1),y:axisY+14,'text-anchor':first?'start':(last?'end':'middle'),'font-size':fsT.toFixed(1)});
+    tx.textContent=t;svg.appendChild(tx);
+  });
+  host.appendChild(svg);
+  var tip=document.createElement('div');tip.className='svgchart-tip';tip.setAttribute('aria-hidden','true');host.appendChild(tip);
+  rows.forEach(function(g,i){
+    var b=data.bars[i];
+    function place(ev){
+      var r=host.getBoundingClientRect();
+      var cx=g._bw/2,cy=g._mid-6;
+      if(ev&&typeof ev.clientX==='number'){cx=ev.clientX-r.left;cy=ev.clientY-r.top-8;}
+      var tw=tip.offsetWidth||112;
+      cx=Math.max(tw/2+2,Math.min(w-tw/2-2,cx));
+      tip.style.left=cx+'px';tip.style.top=Math.max(30,cy)+'px';
+    }
+    g.addEventListener('pointerenter',function(ev){scTipFill(tip,b,data,L);tip.classList.add('show');place(ev);svg.classList.add('sc-hover');g.classList.add('on');});
+    g.addEventListener('pointermove',function(ev){if(tip.classList.contains('show'))place(ev);});
+    g.addEventListener('pointerleave',function(){tip.classList.remove('show');svg.classList.remove('sc-hover');g.classList.remove('on');});
+    g.addEventListener('focus',function(){scTipFill(tip,b,data,L);tip.classList.add('show');place(null);svg.classList.add('sc-hover');g.classList.add('on');});
+    g.addEventListener('blur',function(){tip.classList.remove('show');svg.classList.remove('sc-hover');g.classList.remove('on');});
+  });
+}
+function scAnimate(host){
+  if(!host)return;
+  var svg=host.querySelector('svg');if(!svg)return;
+  if(host.getAttribute('data-played')==='1')return;
+  host.setAttribute('data-played','1');
+  var bars=[].slice.call(svg.querySelectorAll('.sc-bar')),vals=[].slice.call(svg.querySelectorAll('.sc-val'));
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var dur=1250,t0=performance.now();
+  function frame(now){
+    var p=reduce?1:Math.min(1,(now-t0)/dur),e=1-Math.pow(1-p,3);
+    bars.forEach(function(b){b.setAttribute('width',Math.max(0,(+b.getAttribute('data-w'))*e).toFixed(2));});
+    vals.forEach(function(v){v.textContent=String(Math.round((+v.getAttribute('data-v'))*e));});
+    if(p<1){requestAnimationFrame(frame);}
+    else{vals.forEach(function(v){v.textContent=v.getAttribute('data-v');});}
+  }
+  if(reduce){frame(performance.now()+dur+1);}else{requestAnimationFrame(frame);}
+}
+function refreshSvgCharts(){
+  var hs=document.querySelectorAll('[data-svgchart]');
+  for(var i=0;i<hs.length;i++)scRender(hs[i]);
+}
+var scResizeT;
+window.addEventListener('resize',function(){
+  clearTimeout(scResizeT);
+  scResizeT=setTimeout(refreshSvgCharts,180);
+});
+
 var motionStarted=false;
 function initMotion(){
   if(motionStarted)return;motionStarted=true;
@@ -752,6 +904,14 @@ function initMotion(){
     var revealIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');revealIO.unobserve(e.target);}});},{threshold:.08});
     revealEls.forEach(function(x){revealIO.observe(x);});
   }else{revealEls.forEach(function(x){x.classList.add('in');});}
+  var scHosts=document.querySelectorAll('[data-svgchart]');
+  if(scHosts.length){
+    refreshSvgCharts();
+    if('IntersectionObserver' in window){
+      var scIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){scAnimate(e.target);scIO.unobserve(e.target);}});},{threshold:.15});
+      scHosts.forEach(function(h){scIO.observe(h);});
+    }else{scHosts.forEach(scAnimate);}
+  }
   var cards=document.querySelectorAll('.chartcard');
   if('IntersectionObserver' in window){
     var chartIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){runChart(e.target);chartIO.unobserve(e.target);}});},{threshold:.18});
